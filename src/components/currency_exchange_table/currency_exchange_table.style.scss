@@ -1,0 +1,36 @@
+.exchenge_table {
+    margin: 0 auto;
+    padding: 40px 0
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
+    border: 1px solid grey; 
+    }
+
+caption {
+    caption-side: top;
+    text-align: center;
+    padding: 10px 0; 
+    font-size: 16px;
+}
+
+th, td {
+    padding: 25px 90px;
+    border: 1px solid grey
+}
+
+.converter__wrapper {
+    display: flex;
+}
+.btn__arrows {
+    padding: 0 5px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.btn__arrows:hover {
+    background-color: grey;
+}
