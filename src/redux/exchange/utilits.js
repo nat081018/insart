@@ -1,13 +1,11 @@
-export const  fetchCurrencyExchangeIifo = async () => {
+export const  fetchCurrencyExchange = async () => {
     try {
         // const response = []
-    fetch('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
-     .then((response) => response.json())
-     .then((res) => {
-         console.log(res) 
-        return this.setState({exchangeInfo: res})
-    }) 
-
+    const response = await fetch('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+    const data = await response.json()
+    console.log(data)
+    return data
+     
     }catch(error){
         console.log(error)
     }

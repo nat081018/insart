@@ -7,6 +7,10 @@ import "./popupForEdit.style.scss"
         this.state = {
             newValue: ""
         }
+    } 
+
+    handleSubmit = () =>  {
+        console.log("submit")
     }
     
     newValueChange = (e) => {
@@ -17,7 +21,7 @@ import "./popupForEdit.style.scss"
 render() {
     return(
         <div className="popup__forEdit">
-            <form action="" onSubmit="handleSubmit">
+            <form  onSubmit={this.handleSubmit}>
                 <span>please a new value</span>
                 <input 
                 onChange={this.newValueChange}
