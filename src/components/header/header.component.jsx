@@ -1,4 +1,4 @@
-import React, {Link } from "react"
+import React from "react"
 import "./header.style.scss"
 import { ReactComponent as Logo } from "../../assets/moneyexchange_120800.svg";
 

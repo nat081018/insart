@@ -1,4 +1,4 @@
-import React,  {useState, useEffect } from "react"
+import React,  {useEffect } from "react"
 import "./currency_exchange_table.style.scss"
 import {connect} from "react-redux"
 

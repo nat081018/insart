@@ -4,11 +4,7 @@ import "./exchange_calculator.style.scss"
 
 class ExchangeCalculator extends Component {
 
-    constructor(){
-        super()
-    }
-
-    state = {
+     state = {
       currencies: ["UAH", "USD", "EUR", "RUR", "BTC"],
       base: "UAH",
       amount: "",
@@ -101,7 +97,7 @@ class ExchangeCalculator extends Component {
       );
     };
     render() {
-      const { currencies, base, amount, convertTo, result, date } = this.state;
+      const { currencies, base, amount, convertTo, result } = this.state;
       return (
         <div className="container">
               <div className="wrapper__inputs">

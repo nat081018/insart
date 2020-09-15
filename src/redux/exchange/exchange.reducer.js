@@ -1,7 +1,5 @@
 import exchangeActionsType from "./exchange.types"
-import {exchangeFetchInfoAction} from "./exchange.actions"
 
-import {fetchCurrencyExchangeIifo} from "./exchange.saga"
 
 const  INITIAL_STATE =  {
     exchangeInfo: [],

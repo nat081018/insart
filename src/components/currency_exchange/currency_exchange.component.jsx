@@ -1,4 +1,4 @@
-import React, {useState }  from "react"
+import React from "react"
 import "./currency_exchange.style.scss"
 
 import CurrencyExchangeTdSale  from "../currencyExchangeTdsale/currencyExchangeTdsale.component"
