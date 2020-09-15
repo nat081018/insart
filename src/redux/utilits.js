@@ -1,4 +1,4 @@
-const  getDateLocal =  (currentDate) => { 
+export const  getDateLocal =  (currentDate) => { 
     const date = new Date()
     const getMonths = () => {
   
@@ -7,8 +7,59 @@ const  getDateLocal =  (currentDate) => {
     return month
     }
      currentDate  = `${date.getDate()}/${getMonths()}/${date.getFullYear()}`
-    console.log(currentDate)
     return currentDate
   }
 
-  export default  getDateLocal
+// added id, fixed number 
+const fixNum = (str) => {
+  let parsStr = parseFloat(str)
+  return parsStr
+}
+
+
+export const   fetchCurrencyExchange = async () => {
+  try {
+  const response = await fetch('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5')
+  const data = await response.json()
+
+  const fixedData = await data.map(({buy, sale, ...rest}) =>({
+    ...rest,
+    buy: fixNum(buy) ,
+    sale: fixNum(sale),
+    id: String(Math.random())
+  }))
+  console.log(fixedData) 
+  return fixedData
+
+  }catch(error){
+      console.log(error)
+  }
+}
+//////
+
+export  const newExchangeValue = (currentID, newVal) => {
+  
+  console.log(`экшин сработал ${newVal}`)
+  const res = {
+    _id: currentID,
+    newVal: newVal
+  }
+  console.log(res)
+  return res
+
+}
+
+export  const newExchangeValueSale = (currentID, newVal) => {
+  
+  console.log(`экшин сработал ${newVal}`)
+  const res = {
+    _id: currentID,
+    newVal: newVal
+  }
+  console.log(res)
+  return res
+
+}
+
+
+

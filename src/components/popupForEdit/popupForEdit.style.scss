@@ -1,18 +1,20 @@
 .popup__forEdit {
     width: 200px;
-    height: 86px;
-    border: 2px solid black;
+    height: 56px;
+    border: 2px solid greenyellow;
     font-size: 16px;
+    margin: 0 auto;
 }
 
 .popup__forEdit-btn {
-    padding: 5px;
+    margin: 0  3px;
 }
 
 .btn__save {
     background-color: green;
 }
 
-.btn__cancel {
-    background-color: red;
+#newValue {
+    width: 80%;
 }
+

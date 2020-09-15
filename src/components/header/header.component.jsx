@@ -6,7 +6,7 @@ const Header = () => (
     <div className="header__wrapper">
         {/* <Link></Link> */}
         <div className="header__logo-wrapper ">
-            <p>currency exchange</p>
+            <h1>currency exchange</h1>
             < Logo className="header__logo" />
         </div>
       

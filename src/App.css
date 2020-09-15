@@ -1,7 +1,13 @@
+ 
+ 
 .App {
+  background-color: gray;
+  color: white;
   margin: 0 auto;
   text-align: center;
   width: 90%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 

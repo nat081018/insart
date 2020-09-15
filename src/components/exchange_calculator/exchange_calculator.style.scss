@@ -1,0 +1,35 @@
+.inputs {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    @media screen and (max-width: 630px) {
+        display: block;
+
+    }
+}
+
+.btn__arrow-wrapper{
+    margin: 0 15px;
+}
+
+.input{
+    border: none;
+    padding: 5px;
+    box-shadow: 8px 3px 11px 6px #7fde47;
+}
+.form-control {
+    margin-left: 5px;
+    padding: 5px;
+}
+
+.swap {
+    font-size:  30px;
+    text-align: center;
+    line-height: 1;
+}
+
+.wrapper__inputs {
+    font-size: 21px;
+    padding-top: 59px;
+    line-height: 2;
+}

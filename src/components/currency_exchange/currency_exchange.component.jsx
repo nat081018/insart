@@ -1,38 +1,29 @@
-import React  from "react"
+import React, {useState }  from "react"
 import "./currency_exchange.style.scss"
 
-import Tooltip from '@material-ui/core/Tooltip';
-import { makeStyles } from '@material-ui/core/styles';
+import CurrencyExchangeTdSale  from "../currencyExchangeTdsale/currencyExchangeTdsale.component"
+import CurrencyExchangeTdbuy from "../currencyExchangeTdbuy/currencyExchangeTdbuy.component"
 
 
-
-const useStyles = makeStyles({
-    root: {
-      width: 500,
-    },
-  });
-
-
-const CurrencyExchange = ({base_ccy, ccy, buy, sale, changeValue }) => {  
-    const classes = useStyles();
-
+const CurrencyExchange = ({base_ccy, ccy, buy, sale, id}) => {  
+    
     return(
     <>
-        <tr>
+        <tr className="th__width">
             <td>{`${ccy}/${base_ccy}`}</td>
-                <td onClick={changeValue}>
-                    <Tooltip title="Add" arrow>
-                        <span  className={classes.root}>{buy}</span>
-                    </Tooltip>
-                </td>
-                <td onClick={changeValue}>
-                    <Tooltip title="Add" arrow>
-                        <span className={classes.root}>{sale}</span>
-                    </Tooltip>
-                </td>     
+            <CurrencyExchangeTdbuy 
+            buy={buy}
+            id={id}
+            className="th__width"
+            />
+            <CurrencyExchangeTdSale 
+            sale={sale}
+            id={id}
+            className="th__width"
+            />
         </tr>
     </>
 )
-}
+};
 
 export default CurrencyExchange

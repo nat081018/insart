@@ -1,12 +1,11 @@
 .exchenge_table {
     margin: 0 auto;
-    padding: 40px 0
 }
 
 table {
     margin: 0 auto;
     border-collapse: collapse; /*убираем пустые промежутки между ячейками*/
-    border: 1px solid grey; 
+    border: 1px solid white; 
     }
 
 caption {
@@ -17,9 +16,32 @@ caption {
 }
 
 th, td {
-    padding: 25px 90px;
-    border: 1px solid grey
+    font-size: 12px;
+    padding: 9px 0;
+    border: 1px solid white
+
+  
 }
+.th__width {
+ padding: 15px 90px;
+ font-size:  16px;
+   @media only  screen and (max-width: 800px) {
+        padding: 11px 60px;
+
+    }
+
+    @media only  screen and (max-width: 580px) {
+        padding: 11px 40px;
+
+    }
+
+    @media only  screen and (max-width: 430px) {
+        padding: 11px 0;
+
+    }
+}
+
+
 
 .converter__wrapper {
     display: flex;
@@ -32,5 +54,6 @@ th, td {
 }
 
 .btn__arrows:hover {
-    background-color: grey;
+    cursor: pointer;
+    background-color: greenyellow;
 }

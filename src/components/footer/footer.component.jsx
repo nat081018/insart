@@ -3,7 +3,9 @@ import "./footer.style.scss"
 
 const Footer  = () => (
     <div className="footer__wrapper">
-        <p>2020 all right reserved</p>
+        <div className="footer__context">
+            <p>2020 all right reserved</p>
+        </div>
     </div>
 )
 
