@@ -1,33 +1,38 @@
-import exchangeActionsType from "./exchange.types"
+import ExchangeActionsType from "./exchange.types"
 
+interface IInitial__state {
+    exchangeInfo: [],
+    isFetching: boolean,
+    errorMesage: any
+}
 
-const  INITIAL_STATE =  {
+const  INITIAL_STATE: IInitial__state =  {
     exchangeInfo: [],
     isFetching: false,
     errorMesage: undefined
 }
 
-const exchangeReducer = (state = INITIAL_STATE, action) => {
+const exchangeReducer = (state = INITIAL_STATE, action: any) => {
     switch (action.type) {
-        case exchangeActionsType.FETCH_REQUESTED: return{
+        case ExchangeActionsType.FETCH_REQUESTED: return{
             ...state,
             isFetching: true
         }
-        case exchangeActionsType.CURRENT_EXCHANGE_INFO: return {
+        case ExchangeActionsType.CURRENT_EXCHANGE_INFO: return {
             ...state, 
             isFetching: false,
             exchangeInfo: action.payload
         }
-        case exchangeActionsType.FETCH_FAILED: return {
+        case ExchangeActionsType.FETCH_FAILED: return {
             ...state, 
             isFetching: false,
             errorMesage: action.payload
         }
-        case exchangeActionsType.USER_ENTER_NEW_EXCHANGE_INFO: return {
+        case ExchangeActionsType.USER_ENTER_NEW_EXCHANGE_INFO: return {
             ...state,
             isFetching: false,
         
-            exchangeInfo: state.exchangeInfo.map((item) => {
+            exchangeInfo: state.exchangeInfo.map((item: any) => {
                 if(item.id ===  action.payload._id) { 
                     return {
                         ...item,
@@ -37,11 +42,11 @@ const exchangeReducer = (state = INITIAL_STATE, action) => {
                 return item
                 })
             }
-            case exchangeActionsType.USER_ENTER_NEW_EXCHANGE_INFO_SALE: return {
+            case ExchangeActionsType.USER_ENTER_NEW_EXCHANGE_INFO_SALE: return {
                 ...state,
                 isFetching: false,
             
-                exchangeInfo: state.exchangeInfo.map((item) => {
+                exchangeInfo: state.exchangeInfo.map((item: any) => {
                     if(item.id ===  action.payload._id) { 
                         return {
                             ...item,

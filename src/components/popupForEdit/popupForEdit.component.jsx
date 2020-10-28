@@ -119,7 +119,6 @@ const handleSubmit = async (e) => {
                 value={value}
                 step="0.01"
                 required
-                // pattern="[0-9]*"
                 />
             </form>   
         </div>

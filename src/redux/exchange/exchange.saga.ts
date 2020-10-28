@@ -1,22 +1,23 @@
 import { call, put,  takeLatest, all } from 'redux-saga/effects'
 import { exchangeFetchInfoAction} from "./exchange.actions"
-import exchangeActionsType from "./exchange.types"
+import ExchangeActionsType from "./exchange.types"
 import {fetchCurrencyExchange} from "../utilits"
 
 
-function* getApiData(action) {
+function* getApiData(action :any) {
     try {
-      // do api call
+      //  api call
       const data = yield call(fetchCurrencyExchange);
+      yield console.log(data)
       yield put(exchangeFetchInfoAction(data));
     } catch (error) {
-      yield put(exchangeFetchInfoAction.FETCH_FAILED, error)
+      yield put(error)
     }
   }
 
 
 export function* watcherFetchExchangeStart ()  {
-    yield takeLatest(exchangeActionsType.FETCH_REQUESTED, getApiData)
+    yield takeLatest(ExchangeActionsType.FETCH_REQUESTED, getApiData)
 }    
 
 export function* exchangeSaga () {

@@ -33,7 +33,7 @@ class ExchangeCalculator extends Component {
     };
 
     getValue = (array, base, convertTo) => {
-        let caseUAH = {
+        const caseUAH = {
           base_ccy: "UAH",
           buy: 1,
           ccy: "UAH",
@@ -41,9 +41,9 @@ class ExchangeCalculator extends Component {
           sale: 1
         }
 
-      let newArr = [...array, caseUAH ]
+      const newArr = [...array, caseUAH ]
 
-      let obj = newArr.filter((arr, i) => 
+      const obj = newArr.filter((arr, i) => 
               arr.ccy === convertTo
         );
         console.log(obj)
